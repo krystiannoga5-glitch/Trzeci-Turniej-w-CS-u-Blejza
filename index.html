@@ -9,7 +9,7 @@
     margin: 0;
     font-family: Arial, sans-serif;
     background: #0f0f0f;
-    color: white;
+    color: black;
   }
 
   header {
@@ -98,7 +98,6 @@
 <header>
 III TURNIEJ W CS U BLEJZA
 </header>
-<<<<<<< HEAD
 
 <!-- ZAKŁADKI -->
 <div class="tabs">
@@ -201,22 +200,28 @@ Velocity Apex Project
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Grupa D</title>
+<title>Grupy Turniejowe</title>
 
 <style>
     body{
         font-family: Arial, sans-serif;
-        background:#080000;
+        background:#e9e9e9;
         padding:40px;
-        color:#000; /* CZARNE NAPISY */
+        color:#000;
     }
 
-    .wrapper{
-        width:550px;
+    .container{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:30px;
+        max-width:1200px;
         margin:auto;
-        background:#ffffff;
+    }
+
+    .group-box{
+        background:#fff;
         padding:20px;
-        color:#000; /* CZARNE NAPISY */
+        border-radius:6px;
     }
 
     table{
@@ -229,7 +234,7 @@ Velocity Apex Project
         height:35px;
         padding:4px;
         text-align:center;
-        color:#000; /* CZARNE NAPISY */
+        color:#000;
     }
 
     th{
@@ -240,93 +245,166 @@ Velocity Apex Project
     th:first-child,
     td:first-child{
         text-align:left;
-        width:220px;
+        width:180px;
     }
 
-    .mecze{
+    .matches{
         margin-top:10px;
-        font-size:18px;
+        font-size:16px;
         font-weight:bold;
         line-height:1.6;
-        color:#000; /* CZARNE NAPISY */
     }
 
-    .awans{
-        margin-top:30px;
-        font-size:18px;
+    .advance{
+        margin-top:20px;
+        font-size:16px;
         font-weight:bold;
-        color:#000; /* CZARNE NAPISY */
     }
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<div class="container">
 
-    <table>
-        <tr>
-            <th>Grupa D</th>
-            <th>M</th>
-            <th>W</th>
-            <th>R</th>
-            <th>P</th>
-            <th>Rundy</th>
-            <th>Pkt</th>
-        </tr>
+    <!-- GRUPA A -->
+    <div class="group-box">
 
-        <tr>
-            <td>D1</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+        <table>
+            <tr>
+                <th>Grupa A</th>
+                <th>M</th>
+                <th>W</th>
+                <th>R</th>
+                <th>P</th>
+                <th>Rundy</th>
+                <th>Pkt</th>
+            </tr>
 
-        <tr>
-            <td>D2</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <tr><td>A1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A2</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A3</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>A4</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </table>
 
-        <tr>
-            <td>D3</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+        <div class="matches">
+            03.06 21:20 A1-A2=<br>
+            04.06 15:00 A3-A4=<br>
+            07.06 12:20 A1-A3=<br>
+            07.06 13:40 A2-A4=<br>
+            09.06 20:00 A1-A4=<br>
+            09.06 21:20 A2-A3=
+        </div>
 
-        <tr>
-            <td>D4</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+        <div class="advance">
+            Awans do ćwierćfinałów wywalczyli:
+        </div>
 
-    <div class="mecze">
-        03.06 21:20 D1-D2=<br>
-        04.06 15:00 D3-D4=<br>
-        07.06 12:20 D1-D3=<br>
-        07.06 13:40 D2-D4=<br>
-        09.06 20:00 D1-D4=<br>
-        09.06 21:20 D2-D3=
     </div>
 
-    <div class="awans">
-        Awans do ćwierćfinałów wywalczyli:
+    <!-- GRUPA B -->
+    <div class="group-box">
+
+        <table>
+            <tr>
+                <th>Grupa B</th>
+                <th>M</th>
+                <th>W</th>
+                <th>R</th>
+                <th>P</th>
+                <th>Rundy</th>
+                <th>Pkt</th>
+            </tr>
+
+            <tr><td>B1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B2</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B3</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>B4</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </table>
+
+        <div class="matches">
+            03.06 21:20 B1-B2=<br>
+            04.06 15:00 B3-B4=<br>
+            07.06 12:20 B1-B3=<br>
+            07.06 13:40 B2-B4=<br>
+            09.06 20:00 B1-B4=<br>
+            09.06 21:20 B2-B3=
+        </div>
+
+        <div class="advance">
+            Awans do ćwierćfinałów wywalczyli:
+        </div>
+
+    </div>
+
+    <!-- GRUPA C -->
+    <div class="group-box">
+
+        <table>
+            <tr>
+                <th>Grupa C</th>
+                <th>M</th>
+                <th>W</th>
+                <th>R</th>
+                <th>P</th>
+                <th>Rundy</th>
+                <th>Pkt</th>
+            </tr>
+
+            <tr><td>C1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>C2</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>C3</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>C4</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </table>
+
+        <div class="matches">
+            03.06 21:20 C1-C2=<br>
+            04.06 15:00 C3-C4=<br>
+            07.06 12:20 C1-C3=<br>
+            07.06 13:40 C2-C4=<br>
+            09.06 20:00 C1-C4=<br>
+            09.06 21:20 C2-C3=
+        </div>
+
+        <div class="advance">
+            Awans do ćwierćfinałów wywalczyli:
+        </div>
+
+    </div>
+
+    <!-- GRUPA D -->
+    <div class="group-box">
+
+        <table>
+            <tr>
+                <th>Grupa D</th>
+                <th>M</th>
+                <th>W</th>
+                <th>R</th>
+                <th>P</th>
+                <th>Rundy</th>
+                <th>Pkt</th>
+            </tr>
+
+            <tr><td>D1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>D2</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>D3</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>D4</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </table>
+
+        <div class="matches">
+            03.06 21:20 D1-D2=<br>
+            04.06 15:00 D3-D4=<br>
+            07.06 12:20 D1-D3=D1<br>
+            07.06 13:40 D2-D4=<br>
+            09.06 20:00 D1-D4=<br>
+            09.06 21:20 D2-D3=
+        </div>
+
+        <div class="advance">
+            Awans do ćwierćfinałów wywalczyli:
+        </div>
+
     </div>
 
 </div>
@@ -407,178 +485,3 @@ function openTab(index) {
 
 </body>
 </html>
-=======
-
-<!-- ZAKŁADKI -->
-<div class="tabs">
-  <div class="tab active" onclick="openTab(0)">III TURNIEJ W CS</div>
-  <div class="tab" onclick="openTab(1)">REGULAMIN</div>
-  <div class="tab" onclick="openTab(2)">NAGRODY</div>
-  <div class="tab" onclick="openTab(3)">ROZGRYWKI</div>
-  <div class="tab" onclick="openTab(4)">UCZESTNICY</div>
-  <div class="tab" onclick="openTab(5)">FAZA GRUPOWA</div>
-  <div class="tab" onclick="openTab(6)">FAZA PUCHAROWA</div>
-  <div class="tab" onclick="openTab(7)">MVP</div>
-  <div class="tab" onclick="openTab(8)">NAGRODY OGLĄDAJĄCYCH</div>
-  <div class="tab" onclick="openTab(9)">MAPY</div>
-  <div class="tab" onclick="openTab(10)">KLASYFIKACJA</div>
-</div>
-
-<!-- TREŚĆ -->
-<div class="content active">Drodzy zawodnicy!
-
-W tym wyjątkowym i szczególnym roku - 10 lecia Armii Płomyków planuję przeprowadzić aż 4 turnieje z nagrodami dla Was. W roku Jubileuszowym odbędą się VI Zimowe Igrzyska Olimpijskie w Minecraft, III Turniej w CS'a, VI Letnie Igrzyska Olimpijskie w Minecraft oraz IV Turniej w CS'a.
-Czas na drugi turniej w tym niezwykłym dla naszej społeczności roku! Po dwóch latach ponownie zorganizuje turniej dla widzów grających w Counter Strike’a. Główne zasady się oczywiście nie zmieniają. Pragnę zaprosić do zapisywania się z drużynami poprzez napisanie w wiadomości prywatnej na discordzie/steam/facebook (strona BlazePL007). 
-Poprzednia edycja, którą zorganizowaliśmy we wrześniu 2024 przebiła wszelkie oczekiwania i założenia! 
-16 drużyn, 80 zawodników (+ rezerwowi) dostarczyli nam wszystkim niesamowitych emocji i wielkich wrażeń! (także tym nie grającym w Counter Strike’a). 
-Raz jeszcze składam serdeczne podziękowanie wszystkim, którzy blisko 2 lata temu uczynili nasz II Turniej w CS’a wspaniałym turniejem!
-Zapraszam do zapoznania się z zasadami turnieju poniżej. Niezmiennie -> moim najważniejszym celem jest stworzenie jak najlepszej imprezy opartej na radosnych i emocjonujących chwilach, wspaniałej atmosferze oraz sprawiedliwych warunkach. O to będę się jak zawsze starał!
-Wszyscy nie możemy się doczekać niesamowitych widowisk, pełnych zwrotów akcji momentów! 
-
-Blejzik
- 🔥</div>
-<div class="content">ZGŁOSZENIE DRUŻYNY DO TURNIEJU
-1.Drużynę w turnieju zapisuje kapitan drużyny (lub inny zawodnik) zwracając się w prywatnej wiadomości do organizatora - napisanie wiadomości prywatnej poprzez discorda/steam/facebook (BlazePL007) 
-
-
-2.Wiadomość zgłaszająca drużynę do udziału w turnieju powinna zawierać:
-a) nazwę drużyny (proszę także o informację jak należy czytać nazwę)
-b) skład drużyny (nicki Steam , z zaznaczeniem roli kapitana w danej drużynie)
-c) najszybszy kontakt do kapitana bądź osoby odpowiedzialnej za bezpośredni i szybki kontakt z organizatorem 
-d) drużyna może w zgłoszeniu zawrzeć avatar/logo/element graficzny reprezentujący drużynę. Materiał ten będzie wykorzystywany w losowaniu fazy grupowej turnieju, otwarciu turnieju oraz zapowiedzi danego meczu w dniu meczowym.
-e) drużyna może także w zgłoszeniu załączyć element muzyczny reprezentujący drużynę. 
-Materiał ten będzie wykorzystywany w losowaniu fazy grupowej turnieju, otwarciu turnieju, przed meczem, a także ponadto w trakcie prowadzenia w meczu (przy zmianie stron, czy też zakończeniu mapy)
-f) drużyna może także w zgłoszeniu załączyć krótki opis drużyny i członków zespołu. Opis ten może zawierać krótki rys drużyny - informację o tym kiedy powstała, 
-od kiedy razem gracie, wspólne oraz indywidualne sukcesy. Możecie opisać, która drużyna (TT/CT)/rodzaje broni/pozycje są Wam najlepsze. Możecie podać swoje rangi. (Te wszystkie informację mogą również pochodzić z gry “Counter Strike Global Offensive”, proszę tylko o zaznaczenie, że podane informację pochodzą z “poprzedniej wersji gry”). 
-Jako organizator chce aby komentowanie waszych zmagań również było na bardzo dobrym poziomie. 
-Materiał ten będzie wykorzystany podczas otwarciu turnieju oraz podczas rozpoczynania i trwania meczu.
-
-Wszystkie dodatkowe informację do zgłoszenia (patrz podpunkty d,e,f) drużyna może przekazać w późniejszym terminie. Nie muszą one zostać przekazane w momencie zgłoszenia drużyny.
-
-Wszystkie powyższe przekzywane informację nie mogą zawierać treści obraźliwych i dyskryminujących, materiały nie mogą naruszać standardów obowiązujacyh w społeczności Armii Płomyków oraz serwisach streamingowych.
-
-Zapisy trwają do 24 maja godzina 00:00. 
-
-Losowanie fazy grupowej odbędzie się 24 maja o godzinie 17:00
- .</div>
-<div class="content">Jak zawsze przy organizacji turniejów, igrzysk chcę wynagrodzić najlepszych uczestników.
-Biorąc udział w turnieju, drużyna zobowiązuje się także do wpłacenia tzw. “wpisowego”. Kwota ta wynosi 10zł od osoby (50zł od drużyny). 
-
-Tak jak w przypadku II edycji, chcemy aby drużyn było 16, więc pula nagród wyniesie m.in 1190zł
-Nagrodami głównymi w turnieju za zajęcie poszczególnych miejsc będą:
-
-Dla drużyny zwycięskiej - 110 zł dla każdego z drużyny
-Dla drugiej drużyny - 60 zł dla każdego z drużyny 
-Dla brązowych medalistów - 40 zł dla każdego z drużyny
-* pula nagród dla wszystkich medalistów wzrosła o 10zł dla każdego z piętnastu medalistów
-
-Ponadto, nagrody indywidualne:
-a) nagroda MVP turnieju - dla zawodnika, który zgromadzi największą liczbę MVP rund, podczas meczów. 
-Nagroda ta wynosi 70 zł.
-b) nagroda publiczności - po każdym spotkaniu widzowie będący na transmisji na żywo będą mogli oddać jeden głos. Po rozegraniu ostatniego meczu - finału - osoba mająca najwięcej głosów od oglądających otrzyma tę nagrodę. (w głosowaniu biorą udział nie zawodnicy)
-Nagroda ta wynosi 70 zł.
-
-
-UWAGA! W głosowaniu na nagrodę publiczności biorą udział oglądający, którzy obserwują kanał minimum od 3 miesięcy.
- 🏆</div>
-<div class="content">Turniej rozpocznie się krótką ceremonią otwarcia oraz meczem otwarcia 31 maja (niedziela) o 21:20
-Krótka ceremonia rozpocznie się o godzinie 21:00
-
-Zgłoszone drużyny zostaną podzielone na cztery grupy i zostanie przeprowadzona faza grupowa (systemem każdy z każdym). Po zakończeniu fazy grupowej, rozpocznie się faza pucharowa, do której awansują po dwa najlepsze zespoły z grup. Rozegrane zostaną ćwierćfinały -> zwycięzcy grup zmierzą się z wicemistrzami grup przeciwnych [tj. np. zwycięzca grupy A vs drugi zespół grupy B itd.], następnie wg drabinki poniżej - mecze półfinałowe.
-
-Zespoły, które przegrają pojedynki półfinałowe, zagrają mecz o 3 miejsce. Zwycięzcy półfinałów zmierzą się ze sobą w wielkim finale. 
-
-Przed każdym meczem odbywa się standardowa procedura znana graczom Counter Strike’a - banowanie map oraz wybór stron (znana z trybu Premier), procedura ma miejsce na Faceit’cie, nie w grze (jak w przypadku rozgrywania normalnych meczy). Dlatego uprzejmie prosimy zawodników o zainstalowanie aplikacji Anti-cheat powiązaną z kontem Faceit. 
-
-Mecze fazy grupowej zostaną rozegrane systemem “do dwóch map” (drużyny rozgrywają ze sobą dwa pojedynki, zwycięstwo oznacza - 1pkt., remis - po 1pkt. dla drużyn). Mecze fazy pucharowej (ćwierćfinały, półfinały, mecz o 3 miejsce oraz mecz o zwycięstwo) zostaną rozegrane systemem “bo3” (do dwóch wygranych map przez jeden z zespołów) Każda drużyna ma prawo poprosić o przełożenie meczu na inny termin niż przydzielony maksymalnie 2h przed planowanym czasem rozegrania meczu. 
-
-Drużyna (przy zapisach) może także podać rezerwowego. 
-W przypadku braku możliwości stawienia się na mecz, jednocześnie gdy drużyna nie chce przekładać można drugiego rezerwowego do drużyny powołać.
-Fakt ten, należy zgłosić do organizata maksymalnie na 30min przed planowanym rozpoczęciem meczu.
-Ewentualnego rezerwowego podaję się przy zapisach, maksymalnie - przed rozpoczęciem turnieju tj. przed 31.05
-
-
-* za nieprzestrzeganie zasad ani próśb organizatora dotyczących turnieju organizator może zakończyć mecz walkowerem
-.</div>
-<div class="content">Do udziału w turnieju zgłosiły się:
-
-Velocity Apex Project 
-/Chaos
-
-</div>
-<div class="content">Faza grupowa - każdy z każdym.</div>
-<div class="content">ĆWIERĆFINAŁY
-10.06 20:00 1A vs 2B =  : 
-10.06 21:20 1B vs 2A =  :
-11.06 20:00 1C vs 2D =  :
-11.06 21:20 1D vs 2C =  :
-
-PÓŁFINAŁY
-13.06 13:00 wygrany 1A/2B vs wygrany 1D/2C = 
-		
-13.06 14:20 wygrany 1B/2A vs wygrany 1C/2D = 
-		
-
-MECZ O 3 MIEJSCE
-
-14.06 13:00 przegrany półfinału 1 vs przegrany półfinału 2= 
-			
-
-FINAŁ
-
-14.06 21:00 zwycięzca półfinału 1 vs zwycięzca półfinału 2 =
-.</div>
-<div class="content">1. 2. 3. .</div>
-<div class="content">1. 2. 3. 🎁</div>
-<div class="content">Mapy: Mirage, Dust2, Inferno, Nuke, Anubis, Vertigo, Ancient,Cache. </div>
-<div class="content">1. 
-2. 
-3. 
-4. 
-5. 
-6. 
-7. 
-8. 
-9. 
-10. 
-11. 
-12. 
-13. 
-14. 
-15. 
-16.
-.</div>
-
-<!-- SOCIAL MEDIA -->
-<div class="social">
-
-  <a class="discord" href="https://discord.gg/hNUaMEj67" target="_blank">Discord</a>
-
-  <a class="facebook" href="https://www.facebook.com/BlazePL/" target="_blank">Facebook</a>
-
-  <a class="twitch" href="https://www.twitch.tv/blazepl007" target="_blank">Twitch</a>
-
-  <a class="tiktok" href="https://www.tiktok.com/@007blazepl" target="_blank">TikTok</a>
-
-  <a class="instagram" href="https://www.instagram.com/blazepl007/" target="_blank">Instagram</a>
-
-  <a class="x" href="https://x.com/007blazepl" target="_blank">X</a>
-
-</div>
-
-<script>
-function openTab(index) {
-  const tabs = document.querySelectorAll(".tab");
-  const contents = document.querySelectorAll(".content");
-
-  tabs.forEach(t => t.classList.remove("active"));
-  contents.forEach(c => c.classList.remove("active"));
-
-  tabs[index].classList.add("active");
-  contents[index].classList.add("active");
-}
-</script>
-
-</body>
-</html>
->>>>>>> 10476798ad607074a9495f518000308beb848cbb
