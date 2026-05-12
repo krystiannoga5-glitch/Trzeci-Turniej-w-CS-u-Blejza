@@ -1,179 +1,273 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>III TURNIEJ W CS u Blejza</title>
 
-  <title>Trzeci Turniej w CS u Blejza</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+  }
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  header {
+    text-align: center;
+    padding: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    background: #111;
+    border-bottom: 1px solid #333;
+  }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px;
+    background: #151515;
+  }
+
+  .tab {
+    padding: 10px 15px;
+    background: #222;
+    border: 1px solid #333;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.2s;
+  }
+
+  .tab:hover {
+    border-color: orange;
+  }
+
+  .tab.active {
+    background: orange;
+    color: black;
+    font-weight: bold;
+  }
+
+  .content {
+    display: none;
+    padding: 25px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .content.active {
+    display: block;
+  }
+
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .social a {
+    text-decoration: none;
+    color: white;
+    background: #222;
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    transition: 0.2s;
+    font-weight: bold;
+  }
+
+  .social a:hover {
+    transform: scale(1.05);
+  }
+
+  .discord:hover { border-color: orange; }
+  .facebook:hover { border-color: blue; }
+  .twitch:hover { border-color: purple; }
+  .tiktok:hover { border-color: green; }
+  .instagram:hover { border-color: pink; }
+  .x:hover { border-color: red; }
+
+</style>
 </head>
 
-<body class="bg-zinc-950 text-white">
-
-  <!-- HERO -->
-  <section class="min-h-screen flex items-center justify-center px-6">
-
-    <div class="max-w-4xl text-center">
-
-      <p class="text-orange-500 uppercase tracking-[6px] mb-4">
-        Counter-Strike 2
-      </p>
-
-      <h1 class="text-5xl md:text-7xl font-black leading-tight">
-        Trzeci Turniej
-        <span class="text-orange-500 block">
-          w CS u Blejza
-        </span>
-      </h1>
-
-      <p class="text-zinc-400 mt-6 text-lg max-w-2xl mx-auto">
-        Dołącz do największego amatorskiego turnieju CS2.
-        Zbierz ekipę, walcz o zwycięstwo i pokaż kto rządzi na serwerze.
-      </p>
-
-      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-
-        <a href="#zapisy"
-          class="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-2xl font-bold">
-          Zapisz Drużynę
-        </a>
-
-        <a href="#info"
-          class="border border-zinc-700 hover:border-orange-500 hover:text-orange-500 transition px-8 py-4 rounded-2xl font-bold">
-          Informacje
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- INFO -->
-  <section id="info" class="py-24 px-6 border-t border-zinc-800">
-
-    <div class="max-w-6xl mx-auto">
-
-      <h2 class="text-4xl font-black mb-12 text-center">
-        Informacje o Turnieju
-      </h2>
-
-      <div class="grid md:grid-cols-3 gap-6">
-
-        <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
-          <h3 class="text-2xl font-bold text-orange-500 mb-4">
-            Data
-          </h3>
-
-          <p class="text-zinc-400">
-            31 Maja 2026
-          </p>
-        </div>
-
-        <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
-          <h3 class="text-2xl font-bold text-orange-500 mb-4">
-            Format
-          </h3>
-
-          <p class="text-zinc-400">
-            5v5 • Single Elimination • BO3
-          </p>
-        </div>
-
-        <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
-          <h3 class="text-2xl font-bold text-orange-500 mb-4">
-            Nagroda
-          </h3>
-
-          <p class="text-zinc-400">
-             pula nagród wyniesie m.in 1190zł 🏆
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- DRUŻYNY -->
-  <section class="py-24 px-6">
-
-    <div class="max-w-6xl mx-auto">
-
-      <h2 class="text-4xl font-black mb-12 text-center">
-        Drużyny
-      </h2>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <div class="bg-zinc-900 p-6 rounded-3xl border border-zinc-800 text-center">
-          <h3 class="text-xl font-bold">Velocity Apex Project</h3>
-        </div>
-
-        <div class="bg-zinc-900 p-6 rounded-3xl border border-zinc-800 text-center">
-          <h3 class="text-xl font-bold">Chaos</h3>
-        </div>
-
-        <div class="bg-zinc-900 p-6 rounded-3xl border border-zinc-800 text-center">
-          <h3 class="text-xl font-bold">No Mercy</h3>
-        </div>
-
-        <div class="bg-zinc-900 p-6 rounded-3xl border border-zinc-800 text-center">
-          <h3 class="text-xl font-bold">Blejza Squad</h3>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ZAPISY -->
-  <section id="zapisy" class="py-24 px-6 border-t border-zinc-800">
-
-    <div class="max-w-3xl mx-auto text-center">
-
-      <h2 class="text-4xl font-black">
-        Zapisy Otwarte
-      </h2>
-
-      <p class="text-zinc-400 mt-6">
-        Chcesz wziąć udział? Napisz na Discordzie i zgłoś swoją drużynę.
-      </p>
-
-      <a href="#"
-        class="inline-block mt-10 bg-orange-500 hover:bg-orange-600 transition px-10 py-5 rounded-2xl font-bold text-lg">
-        ```html id="d9k3pw"
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <title>Discord Redirect</title>
-</head>
 <body>
 
-  <script>
-    window.location.href = "https://discord.gg/hNUaMEj67";
-  </script>
+<header>
+III TURNIEJ W CS U BLEJZA
+</header>
 
-</body>
-</html>
-```
+<!-- ZAKŁADKI -->
+<div class="tabs">
+  <div class="tab active" onclick="openTab(0)">III TURNIEJ W CS</div>
+  <div class="tab" onclick="openTab(1)">REGULAMIN</div>
+  <div class="tab" onclick="openTab(2)">NAGRODY</div>
+  <div class="tab" onclick="openTab(3)">ROZGRYWKI</div>
+  <div class="tab" onclick="openTab(4)">UCZESTNICY</div>
+  <div class="tab" onclick="openTab(5)">FAZA GRUPOWA</div>
+  <div class="tab" onclick="openTab(6)">FAZA PUCHAROWA</div>
+  <div class="tab" onclick="openTab(7)">MVP</div>
+  <div class="tab" onclick="openTab(8)">NAGRODY OGLĄDAJĄCYCH</div>
+  <div class="tab" onclick="openTab(9)">MAPY</div>
+  <div class="tab" onclick="openTab(10)">KLASYFIKACJA</div>
+</div>
 
-Po wejściu na stronę użytkownik automatycznie zostanie przekierowany na Discord.
+<!-- TREŚĆ -->
+<div class="content active">Drodzy zawodnicy!
 
-      </a>
+W tym wyjątkowym i szczególnym roku - 10 lecia Armii Płomyków planuję przeprowadzić aż 4 turnieje z nagrodami dla Was. W roku Jubileuszowym odbędą się VI Zimowe Igrzyska Olimpijskie w Minecraft, III Turniej w CS'a, VI Letnie Igrzyska Olimpijskie w Minecraft oraz IV Turniej w CS'a.
+Czas na drugi turniej w tym niezwykłym dla naszej społeczności roku! Po dwóch latach ponownie zorganizuje turniej dla widzów grających w Counter Strike’a. Główne zasady się oczywiście nie zmieniają. Pragnę zaprosić do zapisywania się z drużynami poprzez napisanie w wiadomości prywatnej na discordzie/steam/facebook (strona BlazePL007). 
+Poprzednia edycja, którą zorganizowaliśmy we wrześniu 2024 przebiła wszelkie oczekiwania i założenia! 
+16 drużyn, 80 zawodników (+ rezerwowi) dostarczyli nam wszystkim niesamowitych emocji i wielkich wrażeń! (także tym nie grającym w Counter Strike’a). 
+Raz jeszcze składam serdeczne podziękowanie wszystkim, którzy blisko 2 lata temu uczynili nasz II Turniej w CS’a wspaniałym turniejem!
+Zapraszam do zapoznania się z zasadami turnieju poniżej. Niezmiennie -> moim najważniejszym celem jest stworzenie jak najlepszej imprezy opartej na radosnych i emocjonujących chwilach, wspaniałej atmosferze oraz sprawiedliwych warunkach. O to będę się jak zawsze starał!
+Wszyscy nie możemy się doczekać niesamowitych widowisk, pełnych zwrotów akcji momentów! 
 
-    </div>
+Blejzik
+ 🔥</div>
+<div class="content">ZGŁOSZENIE DRUŻYNY DO TURNIEJU
+1.Drużynę w turnieju zapisuje kapitan drużyny (lub inny zawodnik) zwracając się w prywatnej wiadomości do organizatora - napisanie wiadomości prywatnej poprzez discorda/steam/facebook (BlazePL007) 
 
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-zinc-800 py-8 text-center text-zinc-500">
-    © 2026 Trzeci Turniej w CS u Blejza
-  </footer>
+2.Wiadomość zgłaszająca drużynę do udziału w turnieju powinna zawierać:
+a) nazwę drużyny (proszę także o informację jak należy czytać nazwę)
+b) skład drużyny (nicki Steam , z zaznaczeniem roli kapitana w danej drużynie)
+c) najszybszy kontakt do kapitana bądź osoby odpowiedzialnej za bezpośredni i szybki kontakt z organizatorem 
+d) drużyna może w zgłoszeniu zawrzeć avatar/logo/element graficzny reprezentujący drużynę. Materiał ten będzie wykorzystywany w losowaniu fazy grupowej turnieju, otwarciu turnieju oraz zapowiedzi danego meczu w dniu meczowym.
+e) drużyna może także w zgłoszeniu załączyć element muzyczny reprezentujący drużynę. 
+Materiał ten będzie wykorzystywany w losowaniu fazy grupowej turnieju, otwarciu turnieju, przed meczem, a także ponadto w trakcie prowadzenia w meczu (przy zmianie stron, czy też zakończeniu mapy)
+f) drużyna może także w zgłoszeniu załączyć krótki opis drużyny i członków zespołu. Opis ten może zawierać krótki rys drużyny - informację o tym kiedy powstała, 
+od kiedy razem gracie, wspólne oraz indywidualne sukcesy. Możecie opisać, która drużyna (TT/CT)/rodzaje broni/pozycje są Wam najlepsze. Możecie podać swoje rangi. (Te wszystkie informację mogą również pochodzić z gry “Counter Strike Global Offensive”, proszę tylko o zaznaczenie, że podane informację pochodzą z “poprzedniej wersji gry”). 
+Jako organizator chce aby komentowanie waszych zmagań również było na bardzo dobrym poziomie. 
+Materiał ten będzie wykorzystany podczas otwarciu turnieju oraz podczas rozpoczynania i trwania meczu.
+
+Wszystkie dodatkowe informację do zgłoszenia (patrz podpunkty d,e,f) drużyna może przekazać w późniejszym terminie. Nie muszą one zostać przekazane w momencie zgłoszenia drużyny.
+
+Wszystkie powyższe przekzywane informację nie mogą zawierać treści obraźliwych i dyskryminujących, materiały nie mogą naruszać standardów obowiązujacyh w społeczności Armii Płomyków oraz serwisach streamingowych.
+
+Zapisy trwają do 24 maja godzina 00:00. 
+
+Losowanie fazy grupowej odbędzie się 24 maja o godzinie 17:00
+ .</div>
+<div class="content">Jak zawsze przy organizacji turniejów, igrzysk chcę wynagrodzić najlepszych uczestników.
+Biorąc udział w turnieju, drużyna zobowiązuje się także do wpłacenia tzw. “wpisowego”. Kwota ta wynosi 10zł od osoby (50zł od drużyny). 
+
+Tak jak w przypadku II edycji, chcemy aby drużyn było 16, więc pula nagród wyniesie m.in 1190zł
+Nagrodami głównymi w turnieju za zajęcie poszczególnych miejsc będą:
+
+Dla drużyny zwycięskiej - 110 zł dla każdego z drużyny
+Dla drugiej drużyny - 60 zł dla każdego z drużyny 
+Dla brązowych medalistów - 40 zł dla każdego z drużyny
+* pula nagród dla wszystkich medalistów wzrosła o 10zł dla każdego z piętnastu medalistów
+
+Ponadto, nagrody indywidualne:
+a) nagroda MVP turnieju - dla zawodnika, który zgromadzi największą liczbę MVP rund, podczas meczów. 
+Nagroda ta wynosi 70 zł.
+b) nagroda publiczności - po każdym spotkaniu widzowie będący na transmisji na żywo będą mogli oddać jeden głos. Po rozegraniu ostatniego meczu - finału - osoba mająca najwięcej głosów od oglądających otrzyma tę nagrodę. (w głosowaniu biorą udział nie zawodnicy)
+Nagroda ta wynosi 70 zł.
+
+
+UWAGA! W głosowaniu na nagrodę publiczności biorą udział oglądający, którzy obserwują kanał minimum od 3 miesięcy.
+ 🏆</div>
+<div class="content">Turniej rozpocznie się krótką ceremonią otwarcia oraz meczem otwarcia 31 maja (niedziela) o 21:20
+Krótka ceremonia rozpocznie się o godzinie 21:00
+
+Zgłoszone drużyny zostaną podzielone na cztery grupy i zostanie przeprowadzona faza grupowa (systemem każdy z każdym). Po zakończeniu fazy grupowej, rozpocznie się faza pucharowa, do której awansują po dwa najlepsze zespoły z grup. Rozegrane zostaną ćwierćfinały -> zwycięzcy grup zmierzą się z wicemistrzami grup przeciwnych [tj. np. zwycięzca grupy A vs drugi zespół grupy B itd.], następnie wg drabinki poniżej - mecze półfinałowe.
+
+Zespoły, które przegrają pojedynki półfinałowe, zagrają mecz o 3 miejsce. Zwycięzcy półfinałów zmierzą się ze sobą w wielkim finale. 
+
+Przed każdym meczem odbywa się standardowa procedura znana graczom Counter Strike’a - banowanie map oraz wybór stron (znana z trybu Premier), procedura ma miejsce na Faceit’cie, nie w grze (jak w przypadku rozgrywania normalnych meczy). Dlatego uprzejmie prosimy zawodników o zainstalowanie aplikacji Anti-cheat powiązaną z kontem Faceit. 
+
+Mecze fazy grupowej zostaną rozegrane systemem “do dwóch map” (drużyny rozgrywają ze sobą dwa pojedynki, zwycięstwo oznacza - 1pkt., remis - po 1pkt. dla drużyn). Mecze fazy pucharowej (ćwierćfinały, półfinały, mecz o 3 miejsce oraz mecz o zwycięstwo) zostaną rozegrane systemem “bo3” (do dwóch wygranych map przez jeden z zespołów) Każda drużyna ma prawo poprosić o przełożenie meczu na inny termin niż przydzielony maksymalnie 2h przed planowanym czasem rozegrania meczu. 
+
+Drużyna (przy zapisach) może także podać rezerwowego. 
+W przypadku braku możliwości stawienia się na mecz, jednocześnie gdy drużyna nie chce przekładać można drugiego rezerwowego do drużyny powołać.
+Fakt ten, należy zgłosić do organizata maksymalnie na 30min przed planowanym rozpoczęciem meczu.
+Ewentualnego rezerwowego podaję się przy zapisach, maksymalnie - przed rozpoczęciem turnieju tj. przed 31.05
+
+
+* za nieprzestrzeganie zasad ani próśb organizatora dotyczących turnieju organizator może zakończyć mecz walkowerem
+.</div>
+<div class="content">Do udziału w turnieju zgłosiły się:
+
+Velocity Apex Project 
+/Chaos
+
+</div>
+<div class="content">Faza grupowa - każdy z każdym.</div>
+<div class="content">ĆWIERĆFINAŁY
+10.06 20:00 1A vs 2B =  : 
+10.06 21:20 1B vs 2A =  :
+11.06 20:00 1C vs 2D =  :
+11.06 21:20 1D vs 2C =  :
+
+PÓŁFINAŁY
+13.06 13:00 wygrany 1A/2B vs wygrany 1D/2C = 
+		
+13.06 14:20 wygrany 1B/2A vs wygrany 1C/2D = 
+		
+
+MECZ O 3 MIEJSCE
+
+14.06 13:00 przegrany półfinału 1 vs przegrany półfinału 2= 
+			
+
+FINAŁ
+
+14.06 21:00 zwycięzca półfinału 1 vs zwycięzca półfinału 2 =
+.</div>
+<div class="content">1. 2. 3. .</div>
+<div class="content">1. 2. 3. 🎁</div>
+<div class="content">Mapy: Mirage, Dust2, Inferno, Nuke, Anubis, Vertigo, Ancient,Cache. </div>
+<div class="content">1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16.
+.</div>
+
+<!-- SOCIAL MEDIA -->
+<div class="social">
+
+  <a class="discord" href="https://discord.gg/hNUaMEj67" target="_blank">Discord</a>
+
+  <a class="facebook" href="https://www.facebook.com/BlazePL/" target="_blank">Facebook</a>
+
+  <a class="twitch" href="https://www.twitch.tv/blazepl007" target="_blank">Twitch</a>
+
+  <a class="tiktok" href="https://www.tiktok.com/@007blazepl" target="_blank">TikTok</a>
+
+  <a class="instagram" href="https://www.instagram.com/blazepl007/" target="_blank">Instagram</a>
+
+  <a class="x" href="https://x.com/007blazepl" target="_blank">X</a>
+
+</div>
+
+<script>
+function openTab(index) {
+  const tabs = document.querySelectorAll(".tab");
+  const contents = document.querySelectorAll(".content");
+
+  tabs.forEach(t => t.classList.remove("active"));
+  contents.forEach(c => c.classList.remove("active"));
+
+  tabs[index].classList.add("active");
+  contents[index].classList.add("active");
+}
+</script>
 
 </body>
 </html>
